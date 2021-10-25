@@ -1,0 +1,35 @@
+.theteamtitle {
+    background-color: red;
+    color: white;
+}
+
+.theteamcards {
+    flex-wrap: wrap;
+    margin: 5em auto;
+    max-width: auto;
+}
+
+.employeecards {
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+    width: 90%;
+    background-color: blue;
+    color: white;
+    justify-content: space-between;
+    border: solid black;
+    max-width: 300px;
+    min-height: 25rem;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+}
+
+.list-group-item {
+    color: black;
+    text-decoration: none;
+}
