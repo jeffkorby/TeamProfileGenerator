@@ -35,7 +35,7 @@ function getStarted() {
                         name: 'managerId',
                         validate: answer => {
                             const valid = answer.match(
-                                /^[0-9]\d{3}/ 
+                                /^[0-9]\d{2}/ 
                             );
                             if (valid) {
                                 return true;
@@ -59,11 +59,21 @@ function getStarted() {
                     {
                         type: 'input',
                         message: "What is your manager's phone number?",
-                        name: 'officeNumber'
+                        name: 'officeNumber',
+                        validate: answer => {
+                            const valid = answer.match(
+                              /^[1-9]\d*$/
+                            );
+                            if (valid) {
+                              return true;
+                            }
+                            return "Please enter a valid office number.";
+                          }
+                  
                     }
                 ])
                 .then(answers => {
-                    const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
+                    const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.officeNumber);
                     console.log(manager);
                     teamMembers.push(manager);
                     addTeamMembers();
@@ -114,7 +124,7 @@ function getStarted() {
                     name: 'engineerId',
                     validate: answer => {
                         const valid = answer.match(
-                            /^[0-9]\d{3}/ 
+                            /^[0-9]\d{2}/ 
                         );
                         if (valid) {
                             return true;
@@ -171,10 +181,10 @@ function getStarted() {
                 {
                     type: 'input',
                     message: "What is your intern's ID?",
-                    name: 'internID',
+                    name: 'internId',
                     validate: answer => {
                         const valid = answer.match(
-                            /^[0-9]\d{3}/ 
+                            /^[0-9]\d{2}/ 
                         );
                         if (valid) {
                             return true;
