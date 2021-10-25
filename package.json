@@ -1,0 +1,33 @@
+    {
+    "name": "team-profiles",
+    "version": "1.0.0",
+    "description": "Team Profile Generator using OOP",
+    "main": "./index.js",
+    "directories": {
+      "lib": "lib",
+      "test": "test"
+    },
+    "scripts": {
+      "test": "jest"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/jeffkorby/TeamProfileGenerator"
+    },
+    "keywords": [
+      "[]"
+    ],
+    "author": "Jeff Korby",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/jeffkorby/TeamProfileGenerator/issues"
+    },
+    "homepage": "https://github.com/jeffkorby/TeamProfileGenerator#readme",
+    "dependencies": {
+      "inquirer": "^8.1.2"
+    },
+    "devDependencies": {
+      "jest": "^24.9.0"
+    }
+}
+  

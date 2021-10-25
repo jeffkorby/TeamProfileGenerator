@@ -1,16 +1,16 @@
-const Engineer = require("../lib/employee");
+const Engineer = require("../lib/engineer");
 const Employee = require('../lib/employee');
 
-test('Can add Github with constructor', () => {
+test('Can add github with constructor', () => {
     const testValue = 'GithubUser';
     const e = new Engineer('Foo', 50, 'test@test.com', testValue);
-    expect(e.gitHub).toBe(testValue);
+    expect(e.github).toBe(testValue);
 });
 
-test('The getGitHub() returns Github', () => {
+test('The getgithub() returns github', () => {
     const testValue = 'GithubUser';
     const e = new Engineer('Foo', 50, 'test@test.com', 'GithubUser');
-    expect(e.getGitHub()).toBe(testValue);
+    expect(e.getGithub()).toBe(testValue);
 });
 
 test('The getRole() returns "Engineer"', () => {
